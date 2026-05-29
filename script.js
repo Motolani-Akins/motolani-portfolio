@@ -58,3 +58,18 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// Portfolio scroll buttons
+document.querySelectorAll('.discipline-row').forEach(row => {
+  const track = row.querySelector('.cards-track');
+  const leftBtn = row.querySelector('.scroll-left');
+  const rightBtn = row.querySelector('.scroll-right');
+  
+  if (leftBtn) leftBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+  
+  if (rightBtn) rightBtn.addEventListener('click', () => {
+    track.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+});
