@@ -875,7 +875,7 @@ a { text-decoration: none; color: inherit; }
 .port-card {
   min-width: 280px;
   max-width: 280px;
-  height: 220px;
+  height: 250px;
   background: var(--dark-2);
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -948,16 +948,20 @@ a { text-decoration: none; color: inherit; }
 }
 
 .port-card-context {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--white-dim);
-  line-height: 1.7;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .port-card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 0.8rem 0;
+  margin: 0.7rem 0 0;
 }
 
 .port-card-tags span {
@@ -977,12 +981,14 @@ a { text-decoration: none; color: inherit; }
   color: var(--accent);
   transition: letter-spacing 0.2s;
   align-self: flex-start;
+  margin-top: auto;
+  padding-top: 0.7rem;
 }
 
 .port-card-cta:hover { letter-spacing: 0.25em; }
 
 @media (max-width: 640px) {
-  .port-card { min-width: 240px; max-width: 240px; height: 200px; }
+  .port-card { min-width: 240px; max-width: 240px; height: 238px; }
   .discipline-row { margin-bottom: 2.5rem; }
 }
 
